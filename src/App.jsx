@@ -31,7 +31,6 @@ function App() {
     if(favs){
       setFavorites(favs);
     }
-    
   }, []);
 
 
@@ -39,7 +38,7 @@ function App() {
     localStorage.setItem('favorites', JSON.stringify(favorites));
   },[favorites])
 
-
+  
   return (
     <div className="App">
 
