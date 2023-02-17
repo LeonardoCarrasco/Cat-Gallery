@@ -14,7 +14,12 @@ function App() {
   const [isloading, setIsLoading] = useState(true);
 
   const handleAddToFavorites = (photo) => {
-    favorites.find(f => f.id === photo.id) ? '' : setFavorites([...favorites, photo]);
+    if(favorites){
+      favorites.find(f => f.id === photo.id) ? '' : setFavorites([...favorites, photo]);
+    }
+    else{
+      setFavorites([photo]);
+    } 
   };
 
 

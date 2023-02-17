@@ -1,21 +1,9 @@
-// import { defineConfig } from 'vite'
-// import react from '@vitejs/plugin-react'
+import { defineConfig } from 'vite'
+import react from '@vitejs/plugin-react'
 
-// // https://vitejs.dev/config/
-// export default defineConfig({
-//   plugins: [react()],
-//   base: '/Cat-Gallery/',
-// })
+// https://vitejs.dev/config/
+export default defineConfig({
+  plugins: [react()],
+  base: '/Cat-Gallery/',
+})
 
-
-import react from "@vitejs/plugin-react";
-import { defineConfig } from "vite";
-
-export default ({ mode }) => {
-  return defineConfig({
-    plugins: [
-      react(),
-    ],
-    base: '/Cat-gallery/'
-  });
-};

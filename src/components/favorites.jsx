@@ -13,7 +13,7 @@ const Favorites = ({favorites, setFavorites}) => {
         <div className='fav-container'>
         <h2>Favoritos</h2>
         <div className="favorites">
-          {favorites.map((photo) => (
+          {!favorites ? '' : favorites.map((photo) => (
             <div key={photo.id} className="photo" >
               <div className='img-container'><img src={photo.url} alt="photo" /></div>
               <button onClick={() => handleRemoveFromFavorites(photo)}>
@@ -22,7 +22,7 @@ const Favorites = ({favorites, setFavorites}) => {
             </div>
           ))}
         </div>
-        {favorites.length > 0 && 
+        {!favorites ? '' : 
           <div className='btn-container'>
             <button className='btn-more' onClick={handleRemoveAll}>Eliminar Todos</button>
           </div>
