@@ -22,9 +22,11 @@ const Favorites = ({favorites, setFavorites}) => {
             </div>
           ))}
         </div>
-        <div className='btn-container'>
-          <button className='btn-more' onClick={handleRemoveAll}>Eliminar Todos</button>
-        </div>
+        {favorites.length > 0 && 
+          <div className='btn-container'>
+            <button className='btn-more' onClick={handleRemoveAll}>Eliminar Todos</button>
+          </div>
+        }
       </div>
     )
 }
