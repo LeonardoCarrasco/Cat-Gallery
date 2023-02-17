@@ -16,5 +16,6 @@ export default ({ mode }) => {
     plugins: [
       react(),
     ],
+    base: '/Cat-gallery/'
   });
 };
